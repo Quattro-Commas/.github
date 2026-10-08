@@ -39,21 +39,51 @@ repositories below, maintained and built by the same one person. Nothing here is
 
 ## Current state — stated, not hidden
 
-Checked **2026-10-07**: **four of the five public projects have a failing check on `main` right now** —
-`harness`, `terminal221b`, `mcp-regression-lab` and `repotruth`. `elohim` is green on its latest run. They
-are listed because hiding that would be the opposite of the point.
+Re-verified **2026-10-08**: **no project is failing a test.** `elohim` is green on its latest run.
+
+One real defect exists and it is older than it looks: `harness` last *executed* CI at commit `d11de009` on
+2026-10-02 and failed on `uv sync --frozen`. The six commits since include
+`0eebe594 "Repair uv.lock after the harness-agent2 rename"`, which is very likely its fix — but that fix has
+never been validated. `harness` is **probably green and unverified**, not green.
+
+`terminal221b` and `repotruth` are in the same position: their most recent red runs are not test results.
+Neither has an executed run on `main` since the billing refusals began, so their current state is `UNKNOWN`,
+not green. `repotruth` also has one `startup_failure` (2026-10-05) with no job record at all.
 
 Every project also sits at **0 stars and 0 forks**. There are no customers and no deployments.
 
-Re-derive the check state yourself — "failing" means the most recent run of a workflow the repo runs itself,
-excluding Dependabot update jobs and stale-issue housekeeping:
+### Why the checks are red, and what that does not mean
+
+The last runs on `harness`, `terminal221b`, `mcp-regression-lab` and `repotruth` all failed **without
+executing a single step** — no runner was ever assigned. GitHub refused to start them:
+
+> The job was not started because recent account payments have failed or your spending limit needs to be
+> increased.
+
+That is a billing refusal, not a test result. A job with no steps never ran a line of the code, so it
+cannot be evidence about the code. Read the conclusions without this distinction and you get the tidy,
+wrong, flattering-of-nobody answer "four of five are failing" — which describes a GitHub invoice, not five
+codebases.
+
+`mcp-regression-lab` is the clearest case: its last executed run, CodeQL on 2026-10-03, **succeeded**. The
+red run that followed it on 2026-10-05 ran no steps.
+
+Re-derive the check state yourself. A run counts only if a job actually executed steps:
 
 ```bash
-gh api "repos/BoozeLee/harness/actions/runs?branch=main&per_page=40" \
-  --jq '[.workflow_runs[] | select(.head_branch=="main") | select(.actor.login=="BoozeLee")
-         | select(.name | test("Stale Issues") | not)]
-         | sort_by(.created_at) | reverse | .[0] | "\(.name) \(.conclusion)"'
+sh qc-work/check-state.sh
 ```
+
+That script prints one line per failing job with its `steps=` count and `runner`, so the billing refusals are
+visible instead of silently counted. Note that `repotruth` is **not** under this account — it lives at
+`Bakery-street-project/galacticfederation`, so pass that name explicitly:
+
+```bash
+sh qc-work/check-state.sh BoozeLee/elohim BoozeLee/harness BoozeLee/terminal221b \
+  BoozeLee/mcp-regression-lab Bakery-street-project/galacticfederation
+```
+
+`steps=0` with an empty `runner` is the billing-refusal signature, and it is the thing to filter out.
 
 ## Private work, shown on request
 
