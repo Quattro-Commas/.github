@@ -1,8 +1,10 @@
 # Quattro Commas ♛
 
-**Independent AI engineering studio.** Agent systems, evaluation gates, local inference, applied ML. Everything reproducible.
+**A verification-gated AI studio.** Applied ML and agent tools that carry their own evidence — and the gates that make them checkable.
 
-Run by [Kiliaan Vanvoorden](https://github.com/BoozeLee) from a plant-filled loft in Riemst, Belgium. Ideas, code, culture, freedom — hack, build, jazz, repeat.
+Run by [Kiliaan Vanvoorden](https://github.com/BoozeLee) from a plant-filled loft in Riemst, Belgium. Ideas, code, culture, freedom.
+
+We publish failure states unprompted. A guard that has never been watched to fail has not been shown to work, so `elohim` ships tampered copies of its own instruments and `orgmind` pins a real defect instead of quietly fixing it.
 
 **Open to AI engineering roles** in evaluation and agent infrastructure — remote from Belgium, employment or contract.
 📧 [bakerstreetbandit@zohomail.eu](mailto:bakerstreetbandit@zohomail.eu) · [one-page CV](https://quattro-commas.github.io/resume.pdf) · [Site](https://quattro-commas.github.io)
@@ -21,13 +23,26 @@ Run by [Kiliaan Vanvoorden](https://github.com/BoozeLee) from a plant-filled lof
 ## House rules
 
 - Every number in a README is re-derivable from the repo or from a recorded measurement.
-- No production deployments; everything here is built, tested, and maintained by one person.
-- Good code, better people. Open source & brighter futures.
+- A claim we could not read is `UNKNOWN`. It is never `FALSE`, and never an all-clear.
+- A confirmed defect is pinned as a failing test, not quietly fixed.
+- A repository says what it cannot do.
+
+## What we do not claim
+
+- No customer count, revenue, or funding. None.
+- No production deployments — there is nothing running for anyone but us. This is a measurement, not an ambition.
+- No claim that our gates cover the applied-ML repositories, which are private and unreviewed.
+- No guarantee against the owner rewriting history — `orgmind`'s `SECURITY.md` states the limit exactly.
 
 ## Where the code is
 
 This org is the studio's index — identity, thesis and distribution. The implementation lives in the public
-repositories below, maintained and built by the same one person. Nothing here is a mirror or a fork.
+repositories below, maintained and built by the same one person. Built by one person means you know who answers
+for a broken gate — not that the work is small. Nothing here is a mirror or a fork.
+
+The portfolio is **five** public repositories plus this index: `elohim`, `harness`, `terminal221b`,
+`mcp-regression-lab` and `repotruth`. Re-derive the count with
+`gh repo list BoozeLee --limit 100 --json name --jq '.[].name'`.
 
 | Project | What it gates | Language | Licence |
 |---|---|---|---|
@@ -39,7 +54,8 @@ repositories below, maintained and built by the same one person. Nothing here is
 
 ## Current state — stated, not hidden
 
-Re-verified **2026-10-08**: **no project is failing a test.** `elohim` is green on its latest run.
+Five of five public repositories are accounted for above. Re-verified **2026-10-08**: **no project is
+failing a test.** `elohim` is green on its latest run.
 
 One real defect exists and it is older than it looks: `harness` last *executed* CI at commit `d11de009` on
 2026-10-02 and failed on `uv sync --frozen`. The six commits since include
@@ -62,8 +78,8 @@ executing a single step** — no runner was ever assigned. GitHub refused to sta
 
 That is a billing refusal, not a test result. A job with no steps never ran a line of the code, so it
 cannot be evidence about the code. Read the conclusions without this distinction and you get the tidy,
-wrong, flattering-of-nobody answer "four of five are failing" — which describes a GitHub invoice, not five
-codebases.
+wrong, flattering-of-nobody answer that most of the portfolio was red — which describes a GitHub invoice, not
+code.
 
 `mcp-regression-lab` is the clearest case: its last executed run, CodeQL on 2026-10-03, **succeeded**. The
 red run that followed it on 2026-10-05 ran no steps.
@@ -90,7 +106,7 @@ sh qc-work/check-state.sh BoozeLee/elohim BoozeLee/harness BoozeLee/terminal221b
 The applied-ML and local-inference work runs in private repositories and will not be published, so no client,
 dataset or repository name appears here — and no metrics are quoted, because none of them can be
 re-derived from a public repo. What can honestly be described is the shape of it, which is the only
-evidence behind two of the four pillars above:
+evidence behind the applied-ML and local-inference pillars above:
 
 - a multi-task image classifier that takes one photo and returns both a class and a storage-age estimate, served from ONNX behind FastAPI with a browser demo in front of it
 - a lot-level yield predictor that routes output to specification tiers
