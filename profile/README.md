@@ -4,7 +4,7 @@
 
 Run by [Kiliaan Vanvoorden](https://github.com/BoozeLee) from a plant-filled loft in Riemst, Belgium. Ideas, code, culture, freedom.
 
-We publish failure states unprompted. A guard that has never been watched to fail has not been shown to work, so `elohim` ships tampered copies of its own instruments and `orgmind` pins a real defect instead of quietly fixing it.
+We publish failure states unprompted. A guard that has never been watched to fail has not been shown to work — `elohim` ships tampered copies of its own instruments, and every project under this org publishes its own broken-on-purpose check that runs on every invocation.
 
 **Open to AI engineering roles** in evaluation and agent infrastructure — remote from Belgium, employment or contract.
 📧 [bakerstreetbandit@zohomail.eu](mailto:bakerstreetbandit@zohomail.eu) · [one-page CV](https://quattro-commas.github.io/resume.pdf) · [Site](https://quattro-commas.github.io)
@@ -46,7 +46,7 @@ The portfolio is **five** public repositories plus this index: `elohim`, `harnes
 
 | Project | What it gates | Language | Licence |
 |---|---|---|---|
-| [**elohim**](https://github.com/BoozeLee/elohim) | Numerical claims — publishes a number only when it can re-derive it | Python | MIT |
+| [**elohim**](https://github.com/Quattro-Commas/elohim) | Numerical claims — publishes a number only when it can re-derive it | Python | MIT |
 | [**harness**](https://github.com/BoozeLee/harness) | Agent edits — blocks protected-path writes and secret reads before an edit lands | Python | AGPL-3.0 |
 | [**terminal221b**](https://github.com/BoozeLee/terminal221b) | A local-first coding CLI, bounded to a workspace | TypeScript, Rust | AGPL-3.0 |
 | [**mcp-regression-lab**](https://github.com/BoozeLee/mcp-regression-lab) | MCP tool contracts — a renamed or narrowed tool fails CI instead of production | TypeScript | ISC |
@@ -95,7 +95,7 @@ visible instead of silently counted. Note that `repotruth` is **not** under this
 `Bakery-street-project/galacticfederation`, so pass that name explicitly:
 
 ```bash
-sh qc-work/check-state.sh BoozeLee/elohim BoozeLee/harness BoozeLee/terminal221b \
+sh qc-work/check-state.sh Quattro-Commas/elohim BoozeLee/harness BoozeLee/terminal221b \
   BoozeLee/mcp-regression-lab Bakery-street-project/galacticfederation
 ```
 
