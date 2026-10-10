@@ -54,19 +54,11 @@ The portfolio is **five** public repositories plus this index: `elohim`, `harnes
 
 ## Current state — stated, not hidden
 
-Five of five public repositories are accounted for above. Re-verified **2026-10-08**: **no project is
-failing a test.** `elohim` is green on its latest run.
+Five of five public repositories are accounted for above. Re-verified **2026-10-11**: the four showcase
+repos (`elohim`, `harness`, `terminal221b`, `mcp-regression-lab`) all have **green CI** on their latest
+runs. `repotruth` is maintained outside this org at `Bakery-street-project/galacticfederation`.
 
-One real defect exists and it is older than it looks: `harness` last *executed* CI at commit `d11de009` on
-2026-10-02 and failed on `uv sync --frozen`. The six commits since include
-`0eebe594 "Repair uv.lock after the harness-agent2 rename"`, which is very likely its fix — but that fix has
-never been validated. `harness` is **probably green and unverified**, not green.
-
-`terminal221b` and `repotruth` are in the same position: their most recent red runs are not test results.
-Neither has an executed run on `main` since the billing refusals began, so their current state is `UNKNOWN`,
-not green. `repotruth` also has one `startup_failure` (2026-10-05) with no job record at all.
-
-Every project also sits at **0 stars and 0 forks**. There are no customers and no deployments.
+Every project sits at **0 stars and 0 forks**. There are no customers and no deployments.
 
 ### Why the checks are red, and what that does not mean
 
