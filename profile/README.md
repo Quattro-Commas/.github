@@ -60,39 +60,6 @@ runs. `repotruth` is maintained outside this org at `Bakery-street-project/galac
 
 Every project sits at **0 stars and 0 forks**. There are no customers and no deployments.
 
-### Why the checks are red, and what that does not mean
-
-The last runs on `harness`, `terminal221b`, `mcp-regression-lab` and `repotruth` all failed **without
-executing a single step** — no runner was ever assigned. GitHub refused to start them:
-
-> The job was not started because recent account payments have failed or your spending limit needs to be
-> increased.
-
-That is a billing refusal, not a test result. A job with no steps never ran a line of the code, so it
-cannot be evidence about the code. Read the conclusions without this distinction and you get the tidy,
-wrong, flattering-of-nobody answer that most of the portfolio was red — which describes a GitHub invoice, not
-code.
-
-`mcp-regression-lab` is the clearest case: its last executed run, CodeQL on 2026-10-03, **succeeded**. The
-red run that followed it on 2026-10-05 ran no steps.
-
-Re-derive the check state yourself. A run counts only if a job actually executed steps:
-
-```bash
-sh qc-work/check-state.sh
-```
-
-That script prints one line per failing job with its `steps=` count and `runner`, so the billing refusals are
-visible instead of silently counted. Note that `repotruth` is **not** under this account — it lives at
-`Bakery-street-project/galacticfederation`, so pass that name explicitly:
-
-```bash
-sh qc-work/check-state.sh Quattro-Commas/elohim Quattro-Commas/harness Quattro-Commas/terminal221b \
-  Quattro-Commas/mcp-regression-lab Bakery-street-project/galacticfederation
-```
-
-`steps=0` with an empty `runner` is the billing-refusal signature, and it is the thing to filter out.
-
 ## Private work, shown on request
 
 The applied-ML and local-inference work runs in private repositories and will not be published, so no client,
