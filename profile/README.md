@@ -50,13 +50,13 @@ The portfolio is **five** public repositories plus this index: `elohim`, `harnes
 | [**harness**](https://github.com/Quattro-Commas/harness) | Agent edits — blocks protected-path writes and secret reads before an edit lands | Python | AGPL-3.0 |
 | [**terminal221b**](https://github.com/Quattro-Commas/terminal221b) | A local-first coding CLI, bounded to a workspace | TypeScript, Rust | AGPL-3.0 |
 | [**mcp-regression-lab**](https://github.com/Quattro-Commas/mcp-regression-lab) | MCP tool contracts — a renamed or narrowed tool fails CI instead of production | TypeScript | ISC |
-| [**repotruth**](https://github.com/Bakery-street-project/galacticfederation) | CI that reads the repository, not just the diff. A personal project, so it is hosted outside this org | TypeScript | AGPL-3.0 |
+| [**repotruth**](https://github.com/Quattro-Commas/repotruth) | CI that reads the repository, not just the diff. Now hosted in this org (transferred 2026-10-10 from ) | TypeScript | AGPL-3.0 |
 
 ## Current state — stated, not hidden
 
 Five of five public repositories are accounted for above. Re-verified **2026-10-11**: the four showcase
 repos (`elohim`, `harness`, `terminal221b`, `mcp-regression-lab`) all have **green CI** on their latest
-runs. `repotruth` is maintained outside this org at `Bakery-street-project/galacticfederation`.
+runs. `repotruth` is maintained in this org at `Quattro-Commas/repotruth` (transferred 2026-10-10 from `Bakery-street-project/galacticfederation`; the old URL returns a 301).
 
 Every project sits at **0 stars and 0 forks**. There are no customers and no deployments.
 
