@@ -32,7 +32,7 @@ We publish failure states unprompted. A guard that has never been watched to fai
 - No customer count, revenue, or funding. None.
 - No production deployments — there is nothing running for anyone but us. This is a measurement, not an ambition.
 - No claim that our gates cover the applied-ML repositories, which are private and unreviewed.
-- No guarantee against the owner rewriting history — `orgmind`'s `SECURITY.md` states the limit exactly.
+- No guarantee against the owner rewriting history — audits come from re-deriving each claimed number against a fresh clone of the relevant repo, not from any promise that this README will always reflect the live project state.
 
 ## Where the code is
 
