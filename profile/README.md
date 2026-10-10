@@ -42,7 +42,7 @@ for a broken gate — not that the work is small. Nothing here is a mirror or a 
 
 The portfolio is **five** public repositories plus this index: `elohim`, `harness`, `terminal221b`,
 `mcp-regression-lab` and `repotruth`. Re-derive the count with
-`gh repo list BoozeLee --limit 100 --json name --jq '.[].name'`.
+`gh repo list Quattro-Commas --limit 100 --json name --jq '.[].name'`.
 
 | Project | What it gates | Language | Licence |
 |---|---|---|---|
