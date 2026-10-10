@@ -49,7 +49,7 @@ The portfolio is **five** public repositories plus this index: `elohim`, `harnes
 | [**elohim**](https://github.com/Quattro-Commas/elohim) | Numerical claims — publishes a number only when it can re-derive it | Python | MIT |
 | [**harness**](https://github.com/Quattro-Commas/harness) | Agent edits — blocks protected-path writes and secret reads before an edit lands | Python | AGPL-3.0 |
 | [**terminal221b**](https://github.com/Quattro-Commas/terminal221b) | A local-first coding CLI, bounded to a workspace | TypeScript, Rust | AGPL-3.0 |
-| [**mcp-regression-lab**](https://github.com/BoozeLee/mcp-regression-lab) | MCP tool contracts — a renamed or narrowed tool fails CI instead of production | TypeScript | ISC |
+| [**mcp-regression-lab**](https://github.com/Quattro-Commas/mcp-regression-lab) | MCP tool contracts — a renamed or narrowed tool fails CI instead of production | TypeScript | ISC |
 | [**repotruth**](https://github.com/Bakery-street-project/galacticfederation) | CI that reads the repository, not just the diff. A personal project, so it is hosted outside this org | TypeScript | AGPL-3.0 |
 
 ## Current state — stated, not hidden
@@ -96,7 +96,7 @@ visible instead of silently counted. Note that `repotruth` is **not** under this
 
 ```bash
 sh qc-work/check-state.sh Quattro-Commas/elohim Quattro-Commas/harness Quattro-Commas/terminal221b \
-  BoozeLee/mcp-regression-lab Bakery-street-project/galacticfederation
+  Quattro-Commas/mcp-regression-lab Bakery-street-project/galacticfederation
 ```
 
 `steps=0` with an empty `runner` is the billing-refusal signature, and it is the thing to filter out.
