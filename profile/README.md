@@ -40,8 +40,8 @@ This org is the studio's index — identity, thesis and distribution. The implem
 repositories below, maintained and built by the same one person. Built by one person means you know who answers
 for a broken gate — not that the work is small. Nothing here is a mirror or a fork.
 
-The portfolio is **five** public repositories plus this index: `elohim`, `harness`, `terminal221b`,
-`mcp-regression-lab` and `repotruth`. Re-derive the count with
+The portfolio is **four** public repositories plus this index: `elohim`, `harness`, `terminal221b`
+and `mcp-regression-lab`. Re-derive the count with
 `gh repo list Quattro-Commas --limit 100 --json name --jq '.[].name'`.
 
 | Project | What it gates | Language | Licence |
@@ -50,13 +50,12 @@ The portfolio is **five** public repositories plus this index: `elohim`, `harnes
 | [**harness**](https://github.com/Quattro-Commas/harness) | Agent edits — blocks protected-path writes and secret reads before an edit lands | Python | AGPL-3.0 |
 | [**terminal221b**](https://github.com/Quattro-Commas/terminal221b) | A local-first coding CLI, bounded to a workspace | TypeScript, Rust | AGPL-3.0 |
 | [**mcp-regression-lab**](https://github.com/Quattro-Commas/mcp-regression-lab) | MCP tool contracts — a renamed or narrowed tool fails CI instead of production | TypeScript | ISC |
-| [**repotruth**](https://github.com/Quattro-Commas/repotruth) | CI that reads the repository, not just the diff. Now hosted in this org (transferred 2026-10-10 from `Bakery-street-project/galacticfederation`) | TypeScript | AGPL-3.0 |
 
 ## Current state — stated, not hidden
 
-Five of five public repositories are accounted for above. Re-verified **2026-10-11**: the four showcase
-repos (`elohim`, `harness`, `terminal221b`, `mcp-regression-lab`) all have **green CI** on their latest
-runs. `repotruth` is maintained in this org at `Quattro-Commas/repotruth` (transferred 2026-10-10 from `Bakery-street-project/galacticfederation`; the old URL returns a 301).
+Four of four public repositories are accounted for above. Re-verified **2026-10-11**: all four
+(`elohim`, `harness`, `terminal221b`, `mcp-regression-lab`) have **green CI** on their latest runs.
+`repotruth` was made private on 2026-10-13 and is shown on request.
 
 Every project sits at **0 stars and 0 forks**. There are no customers and no deployments.
 
