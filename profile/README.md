@@ -79,4 +79,4 @@ All of it is screen-shareable on request.
 
 > A guard that does not hold must fail the run.
 
-Collected and explained in [`eval-gates`](https://github.com/Quattro-Commas/eval-gates).
+Every project in the table above is built to it.
